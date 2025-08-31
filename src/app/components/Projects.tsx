@@ -69,14 +69,14 @@ needs of a music studio.
           link="https://form.delphy.pl/"
           git="https://github.com/verzotokumpel/delphy-form"
         />
-        <div ref={containerRef} className="flex flex-col gap-8 md:gap-8">
+        <div ref={containerRef} className="flex flex-col gap-4 md:gap-8">
           <motion.p
             style={{ x: smoothX }}
             className={`${playfair_display.className} text-4xl md:mb-4`}
           >
             Want see more?
           </motion.p>
-          <p className="text-[1.2rem] md:text-xl">
+          <p className="text-sm md:text-xl">
             If you'd like to see more fullstack projects, you can check out my{" "}
             <a
               href="https://github.com/MevWebDev/Warely"
@@ -95,7 +95,7 @@ needs of a music studio.
             </a>
           </p>
 
-          <p>
+          <p className="text-sm md:text-xl">
             If you want to play some games you can visit{" "}
             <a
               href="https://mevwebdev.github.io/battleships/"
@@ -112,8 +112,10 @@ needs of a music studio.
             >
               Tic-Tac-Toe
             </a>
-            <br></br>Warning! These are really old. Written in plain Javascript
-            without responsive design.
+          </p>
+          <p className="text-sm md:text-xl">
+            Warning! These are really old. Written in plain Javascript without
+            responsive design.
           </p>
         </div>
       </motion.div>

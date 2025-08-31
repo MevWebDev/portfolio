@@ -26,19 +26,19 @@ export default function About() {
   return (
     // 4. Attach the ref to the container element
     <div ref={containerRef} id="about" className="w-full flex flex-col mb-16">
-      <div className=" py-6 md:w-[50%] text-xl flex flex-col gap-2 self-end">
+      <div className=" py-6 md:w-[50%] text-xl flex flex-col md:gap-2 self-end">
         <motion.p style={{ x: smoothX }}>Read More</motion.p>
         <p className={`text-4xl md:text-6xl ${playfair_display.className}`}>
           About me
         </p>
         <div className="flex flex-col  gap-8 md:gap-16 my-2">
-          <p className=" text-[1.2rem] md:text-xl">
+          <p className=" text-sm md:text-xl">
             My name is Szymon, and I'm a Full Stack Engineer who loves building
             for the web with JavaScript. I'm always learning and enjoy finding
             new tools to solve real-world problems creatively. Keeping up with
             the latest technology is what drives me as a developer.
           </p>
-          <p className=" text-[1.2rem] md:text-xl">
+          <p className=" text-sm md:text-xl">
             I love learning new things and technologies and I’m always gathering
             inspiration and exploring different ideas and techniques. I’m
             curious and passionate, especially when it comes to art, music and
@@ -46,7 +46,7 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="px-8 py-6 md:w-[50%] text-xl flex flex-col gap-6 md:gap-12 self-start text-start">
+      <div className="md:px-8 py-6 md:w-[50%] text-xl flex flex-col gap-6 md:gap-12 self-start text-start">
         <div className="flex flex-col gap-1">
           <p className={`text-4xl md:text-6xl ${playfair_display.className}`}>
             Contact me
