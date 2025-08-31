@@ -27,7 +27,7 @@ export default function Header() {
   return (
     <div
       id="header"
-      className="xs:w-[80%] w-full  flex flex-col items-center mt-30 mb-58 md:my-64 gap-16 md:gap-24 "
+      className="xs:w-[80%] w-full  flex flex-col items-center mt-30 mb-48 md:my-64 gap-16 md:gap-24 "
     >
       <div className=" w-fit flex justify-center items-center flex-col">
         <motion.p

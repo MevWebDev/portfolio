@@ -47,7 +47,7 @@ export default function About() {
       <div className="px-8 py-6 md:w-[50%] text-xl flex flex-col gap-6 md:gap-12 self-end text-end">
         <div className="flex flex-col gap-1">
           <p className="text-4xl md:text-6xl">Contact me</p>
-          <p>Let's get in touch!</p>
+          <motion.p style={{ x: smoothX }}>Let's get in touch</motion.p>
         </div>
         <div className="flex flex-col">
           <a

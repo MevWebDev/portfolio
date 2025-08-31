@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { useRef } from "react";
 import { StaticImageData } from "next/image";
-import { motion } from "motion/react";
+import { motion, useTransform, useSpring, useScroll } from "motion/react";
 
 interface ProjectProps {
   image: string | StaticImageData;
@@ -21,8 +22,23 @@ export default function Project({
   link,
   git,
 }: ProjectProps) {
+  // Track scroll progress relative to this component
+  const containerRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end end"], // Animate as it enters from the bottom
+  });
+  // Map scroll progress to a vertical movement (from 100px below to its final position)
+  const y = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  // Apply a spring for a smoother effect
+  const smoothY = useSpring(y, { stiffness: 100, damping: 30 });
   return (
-    <div className="flex md:w-[40%] flex-col gap-2 mb-12">
+    <motion.div
+      ref={containerRef}
+      style={{ y: smoothY }}
+      className="flex md:w-[40%] flex-col gap-2 mb-12"
+    >
       <a href={link} target="_blank">
         <motion.div whileHover={{ scale: 1.03 }}>
           <div className="relative w-full ">
@@ -46,6 +62,6 @@ export default function Project({
       >
         <p className=" w-fit">View project</p>
       </a>
-    </div>
+    </motion.div>
   );
 }
