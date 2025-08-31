@@ -30,11 +30,11 @@ export default function Navbar() {
 
   return (
     <div
-      className={`sticky top-0 left-0 right-0 z-50 px-8 py-6 w-full text-xl transition-transform duration-500 ${
+      className={` sticky top-0 left-0 right-0 z-50 px-8 py-6 w-full text-xl transition-transform duration-500 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className=" flex flex-col md:flex-row justify-center md:justify-between items-center backdrop-blur-[5px] md:backdrop-blur-none">
+      <div className=" flex flex-col md:flex-row justify-center md:justify-between items-center backdrop-blur-[10px] md:backdrop-blur-none">
         <button
           className={`${playfair_display.className} text-3xl`}
           onClick={() => scrollToTarget({ target: "home" })}

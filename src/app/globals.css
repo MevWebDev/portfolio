@@ -55,7 +55,7 @@ button {
 
 .noise {
   position: fixed;
-  z-index: -1;
+  z-index: 1000;
   top: -300%;
   left: -150%;
   height: 600%;
