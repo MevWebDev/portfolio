@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
+import { playfair_display } from "../fonts";
 
 export default function Header() {
   const { scrollYProgress } = useScroll();
@@ -36,7 +37,9 @@ export default function Header() {
         >
           Hello, I'm
         </motion.p>
-        <h1 className="text-4xl md:text-7xl">Szymon Grysiewicz</h1>
+        <h1 className={`text-4xl md:text-7xl ${playfair_display.className}`}>
+          Szymon Grysiewicz
+        </h1>
         <motion.p
           style={{ x: smoothX2 }}
           className="text-xl md:text-2xl self-end"

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { scrollToTarget } from "../utils/scroll";
+import { playfair_display } from "../fonts";
 
 export default function Navbar() {
   const [visible, setVisible] = useState(true);
@@ -34,22 +35,27 @@ export default function Navbar() {
       }`}
     >
       <div className=" flex flex-col md:flex-row justify-center md:justify-between items-center backdrop-blur-[5px] md:backdrop-blur-none">
-        <button onClick={() => scrollToTarget({ target: "home" })}>Shai</button>
+        <button
+          className={`${playfair_display.className} text-3xl`}
+          onClick={() => scrollToTarget({ target: "home" })}
+        >
+          Shai
+        </button>
         <div className="flex gap-3">
           <button
-            className="animated-border-link2"
+            className="animated-border-link2 text-sm md:text-base"
             onClick={() => scrollToTarget({ target: "home" })}
           >
             Home
           </button>
           <button
-            className="animated-border-link2"
+            className="animated-border-link2 text-sm md:text-base"
             onClick={() => scrollToTarget({ target: "projects" })}
           >
             Projects
           </button>
           <button
-            className="animated-border-link2"
+            className="animated-border-link2 text-sm md:text-base"
             onClick={() => scrollToTarget({ target: "about" })}
           >
             Contact

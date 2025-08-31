@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import { fira_sans } from "./fonts";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// Configure Fira Sans for body text
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      {/* Apply the font variables to the body */}
+      <body className={`${fira_sans.className} bg-black text-white `}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

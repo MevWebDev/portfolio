@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { StaticImageData } from "next/image";
 import { motion, useTransform, useSpring, useScroll } from "motion/react";
+import { playfair_display } from "../fonts";
 
 interface ProjectProps {
   image: string | StaticImageData;
@@ -52,7 +53,7 @@ export default function Project({
         </motion.div>
       </a>
       <h3 className="text-2xl mt-2">{title}</h3>
-      <p className="text-sm">{stack}</p>
+      <p className={`italic text-sm`}>{stack}</p>
       <p className="text-gray-500 text-base max-w-[90%]">{desc}</p>
       <a
         href={git}

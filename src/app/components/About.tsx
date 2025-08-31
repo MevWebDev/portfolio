@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import { useRef } from "react"; // Import useRef
+import { playfair_display } from "../fonts";
 
 export default function About() {
   // 1. Create a ref for the component's container
@@ -27,7 +28,9 @@ export default function About() {
     <div ref={containerRef} id="about" className="w-full flex flex-col mb-16">
       <div className=" py-6 md:w-[50%] text-xl flex flex-col gap-2 self-end">
         <motion.p style={{ x: smoothX }}>Read More</motion.p>
-        <p className=" text-4xl md:text-6xl">About me</p>
+        <p className={`text-4xl md:text-6xl ${playfair_display.className}`}>
+          About me
+        </p>
         <div className="flex flex-col  gap-8 md:gap-16 my-2">
           <p className=" text-[1.2rem] md:text-xl">
             My name is Szymon, and I'm a Full Stack Engineer who loves building
@@ -45,7 +48,9 @@ export default function About() {
       </div>
       <div className="px-8 py-6 md:w-[50%] text-xl flex flex-col gap-6 md:gap-12 self-start text-start">
         <div className="flex flex-col gap-1">
-          <p className="text-4xl md:text-6xl">Contact me</p>
+          <p className={`text-4xl md:text-6xl ${playfair_display.className}`}>
+            Contact me
+          </p>
           <motion.p style={{ x: smoothX }}>Let's get in touch</motion.p>
         </div>
         <div className="flex flex-col">

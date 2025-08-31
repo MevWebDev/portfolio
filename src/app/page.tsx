@@ -8,9 +8,8 @@ import About from "./components/About";
 export default function Home() {
   return (
     <div className="w-full flex flex-col items-center">
-      <Navbar />
       <Header />
-      <div className="w-[90%] mx-auto flex flex-col gap-8 items-center">
+      <div className="w-[85%] mx-auto flex flex-col gap-8 items-center">
         <Projects />
         <About />
       </div>

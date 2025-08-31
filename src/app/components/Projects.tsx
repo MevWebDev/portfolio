@@ -8,6 +8,7 @@ import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import crypto from "../../../public/images/crypto.png";
 import affirm from "../../../public/images/affirm.png";
 import delphy from "../../../public/images/delphy.png";
+import { playfair_display } from "../fonts";
 
 export default function Projects() {
   const containerRef = useRef(null);
@@ -25,7 +26,9 @@ export default function Projects() {
 
   return (
     <div id="projects" className="w-full h-auto text-xl">
-      <h3 className="text-2xl mb-4">Projects</h3>
+      <h3 className={`${playfair_display.className} text-2xl md:text-4xl mb-4`}>
+        Projects
+      </h3>
       {/* Wrap the project list in a motion.div and apply the transform */}
       <motion.div className="md:grid md:grid-cols-2 gap-16 justify-center">
         <Project
@@ -66,8 +69,11 @@ needs of a music studio.
           link="https://form.delphy.pl/"
           git="https://github.com/verzotokumpel/delphy-form"
         />
-        <div ref={containerRef} className="flex flex-col gap-8 md:gap-2">
-          <motion.p style={{ x: smoothX }} className="text-4xl md:mb-4">
+        <div ref={containerRef} className="flex flex-col gap-8 md:gap-8">
+          <motion.p
+            style={{ x: smoothX }}
+            className={`${playfair_display.className} text-4xl md:mb-4`}
+          >
             Want see more?
           </motion.p>
           <p className="text-[1.2rem] md:text-xl">
