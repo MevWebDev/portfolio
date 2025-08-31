@@ -37,7 +37,7 @@ export default function Project({
     <motion.div
       ref={containerRef}
       style={{ y: smoothY }}
-      className="flex md:w-[40%] flex-col gap-2 mb-12"
+      className="flex  flex-col gap-2 mb-12"
     >
       <a href={link} target="_blank">
         <motion.div whileHover={{ scale: 1.03 }}>
@@ -45,15 +45,15 @@ export default function Project({
             {" "}
             <Image
               src={image}
-              style={{ width: "90%", height: "auto" }}
+              style={{ width: "100%", height: "auto" }}
               alt={title}
             />
           </div>
         </motion.div>
       </a>
-      <h3 className="text-2xl my-2">{title}</h3>
+      <h3 className="text-2xl mt-2">{title}</h3>
       <p className="text-sm">{stack}</p>
-      <p className="text-gray-500 text-base">{desc}</p>
+      <p className="text-gray-500 text-base max-w-[90%]">{desc}</p>
       <a
         href={git}
         className="animated-border-link w-fit"
