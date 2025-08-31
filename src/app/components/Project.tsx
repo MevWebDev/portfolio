@@ -22,12 +22,9 @@ export default function Project({
   git,
 }: ProjectProps) {
   return (
-    <div className="flex md:w-[40%] flex-col gap-2 my-6">
+    <div className="flex md:w-[40%] flex-col gap-2 mb-12">
       <a href={link} target="_blank">
-        <motion.div
-          whileHover={{ scale: 1.03 }}
-          className="grayscale hover:grayscale-0 transition-all duration-300"
-        >
+        <motion.div whileHover={{ scale: 1.03 }}>
           <div className="relative w-full ">
             {" "}
             <Image

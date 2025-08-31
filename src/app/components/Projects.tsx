@@ -1,13 +1,35 @@
+"use client";
+
 import Project from "./Project";
+import { useRef } from "react";
+import { motion, useScroll, useTransform, useSpring } from "motion/react";
 
 import crypto from "../../../public/images/crypto.png";
 import affirm from "../../../public/images/affirm.png";
 import delphy from "../../../public/images/delphy.png";
+
 export default function Projects() {
+  const containerRef = useRef(null);
+
+  // Track scroll progress relative to this component
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end end"], // Animate as it enters from the bottom
+  });
+
+  // Map scroll progress to a vertical movement (from 100px below to its final position)
+  const y = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  // Apply a spring for a smoother effect
+  const smoothY = useSpring(y, { stiffness: 100, damping: 30 });
+
   return (
-    <div id="projects" className="w-full h-auto text-xl">
-      <h3 className="text-2xl mb-8">Projects</h3>
-      <div className="flex flex-wrap gap-4 justify-center">
+    <div ref={containerRef} id="projects" className="w-full h-auto text-xl">
+      <h3 className="text-2xl">Projects</h3>
+      {/* Wrap the project list in a motion.div and apply the transform */}
+      <motion.div
+        style={{ y: smoothY }}
+        className="flex flex-wrap gap-4 justify-center"
+      >
         <Project
           image={crypto}
           title="Title"
@@ -36,7 +58,6 @@ export default function Projects() {
           link="https://affirm-qzwc.vercel.app/"
           git="https://github.com/MevWebDev/affirm"
         />
-        {/* This wrapper will center the third project on the second row */}
         <div className=" flex justify-center">
           <Project
             image={delphy}
@@ -53,7 +74,7 @@ export default function Projects() {
             git="https://github.com/verzotokumpel/delphy-form"
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

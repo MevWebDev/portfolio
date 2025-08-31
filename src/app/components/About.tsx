@@ -28,15 +28,15 @@ export default function About() {
       <div className=" py-6 md:w-[50%] text-xl flex flex-col gap-2">
         <motion.p style={{ x: smoothX }}>Read More</motion.p>
         <p className=" text-4xl md:text-6xl">About me</p>
-        <div className="flex flex-col gap-16 my-2">
-          <p>
+        <div className="flex flex-col  gap-8 md:gap-16 my-2">
+          <p className=" text-[1.2rem] md:text-base">
             Hello, my name is Oliwia Wardulińska and I’m a self-taught front-end
             developer and graphic designer. Itsechi is the nickname I use across
             social medias. I build responsive, accessible websites from scratch
             that look and feel fresh and creative. I’m committed to developing
             products that focus on usability and simplicity.
           </p>
-          <p>
+          <p className=" text-[1.2rem] md:text-base">
             I love learning new things and technologies and I’m always gathering
             inspiration and exploring different ideas and techniques. I’m
             curious and passionate, especially when it comes to art, music and
@@ -44,7 +44,7 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="px-8 py-6 md:w-[50%] text-xl flex flex-col gap-12 self-end text-end">
+      <div className="px-8 py-6 md:w-[50%] text-xl flex flex-col gap-6 md:gap-12 self-end text-end">
         <div className="flex flex-col gap-1">
           <p className="text-4xl md:text-6xl">Contact me</p>
           <p>Let's get in touch!</p>
