@@ -30,15 +30,10 @@ export default function About() {
         <p className=" text-4xl md:text-6xl">About me</p>
         <div className="flex flex-col  gap-8 md:gap-16 my-2">
           <p className=" text-[1.2rem] md:text-xl">
-            My name is Szymon and I'm a passionate Full Stack Engineer with a
-            deep love for JavaScript technologies. My world revolves around the
-            ever-evolving realm of Web Development where I continuously expand
-            my knowledge and skills to craft exceptional digital experiences.
-            Beyond mastering the core technologies, I thrive on exploring
-            cutting-edge innovations, always on the lookout for new tools and
-            techniques to tackle real-world challenges creatively and
-            efficiently. My commitment to staying at the forefront of technology
-            is the driving force behind my journey as a developer.
+            My name is Szymon, and I'm a Full Stack Engineer who loves building
+            for the web with JavaScript. I'm always learning and enjoy finding
+            new tools to solve real-world problems creatively. Keeping up with
+            the latest technology is what drives me as a developer.
           </p>
           <p className=" text-[1.2rem] md:text-xl">
             I love learning new things and technologies and I’m always gathering
