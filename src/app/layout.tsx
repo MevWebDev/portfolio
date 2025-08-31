@@ -19,9 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* Apply the font variables to the body */}
-      <body className={`${fira_sans.className} bg-black text-white `}>
+      <body className={` ${fira_sans.className} bg-black text-white `}>
         <Navbar />
         {children}
+        <div className="noise"></div>
       </body>
     </html>
   );

@@ -58,7 +58,7 @@ export default function Navbar() {
             className="animated-border-link2 text-sm md:text-base"
             onClick={() => scrollToTarget({ target: "about" })}
           >
-            Contact
+            About me & Contact
           </button>
         </div>
       </div>

@@ -27,7 +27,9 @@ export default function About() {
     // 4. Attach the ref to the container element
     <div ref={containerRef} id="about" className="w-full flex flex-col mb-16">
       <div className=" py-6 md:w-[50%] text-xl flex flex-col md:gap-2 self-end">
-        <motion.p style={{ x: smoothX }}>Read More</motion.p>
+        <motion.p className="hidden md:block" style={{ x: smoothX }}>
+          Read More
+        </motion.p>
         <p className={`text-4xl md:text-6xl ${playfair_display.className}`}>
           About me
         </p>
@@ -46,14 +48,16 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="md:px-8 py-6 md:w-[50%] text-xl flex flex-col gap-6 md:gap-12 self-start text-start">
+      <div className="md:px-8 py-6 md:w-[50%] text-xl flex flex-col gap-8 md:gap-12 self-start text-start">
         <div className="flex flex-col gap-1">
           <p className={`text-4xl md:text-6xl ${playfair_display.className}`}>
             Contact me
           </p>
-          <motion.p style={{ x: smoothX }}>Let's get in touch</motion.p>
+          <motion.p className="hidden md:block" style={{ x: smoothX }}>
+            Let's get in touch
+          </motion.p>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-1">
           <a
             href="mailto:grysiewiczszymon47@gmail.com"
             className="animated-border-link w-fit self-start text-xl md:text-3xl"

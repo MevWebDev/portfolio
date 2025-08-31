@@ -53,6 +53,46 @@ button {
   cursor: pointer;
 }
 
+.noise {
+  position: fixed;
+  z-index: -1;
+  top: -300%;
+  left: -150%;
+  height: 600%;
+  width: 600%;
+  background-image: url("/assets/noise.png");
+  background-size: 200px;
+  background-repeat: repeat;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0);
+}
+
 /* Add this for the animated border effect */
 .animated-border-link {
   position: relative;
