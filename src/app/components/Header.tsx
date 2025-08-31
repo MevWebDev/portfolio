@@ -46,8 +46,8 @@ export default function Header() {
       </div>
       <div>
         <p className="text-center w-[80%] md:w-[50%] mx-auto">
-          I’m a passionate full-stack developer and from Poland. You can check
-          out my github or scroll down to see my projects.
+          I’m a passionate full-stack developer from Poland. You can check out
+          my github or scroll down to see my projects.
         </p>
       </div>
       <motion.div

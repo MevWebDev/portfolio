@@ -72,16 +72,40 @@ needs of a music studio.
           </motion.p>
           <p className="text-[1.2rem] md:text-xl">
             If you'd like to see more fullstack projects, you can check out my{" "}
-            <a className="animated-border-link">
+            <a
+              href="https://github.com/MevWebDev/Warely"
+              target="_blank"
+              className="animated-border-link"
+            >
               Warehouse Managment System API
             </a>{" "}
-            or <a className="animated-border-link">Gymify - Gym Social Media</a>
+            or{" "}
+            <a
+              href="https://github.com/MevWebDev/GymApp"
+              target="_blank"
+              className="animated-border-link"
+            >
+              Gymify - Gym Social Media
+            </a>
           </p>
 
           <p>
             If you want to play some games you can visit{" "}
-            <a className="animated-border-link">Battleships</a> or{" "}
-            <a className="animated-border-link">Tic-Tac-Toe</a>
+            <a
+              href="https://mevwebdev.github.io/battleships/"
+              target="blank"
+              className="animated-border-link"
+            >
+              Battleships
+            </a>{" "}
+            or{" "}
+            <a
+              href="https://mevwebdev.github.io/tic-tac-toe/"
+              target="blank"
+              className="animated-border-link"
+            >
+              Tic-Tac-Toe
+            </a>
             <br></br>Warning! These are really old. Written in plain Javascript
             without responsive design.
           </p>
