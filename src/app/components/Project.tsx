@@ -63,7 +63,7 @@ export default function Project({
         target="_blank"
         rel="noopener noreferrer"
       >
-        <p className=" w-fit">View project</p>
+        <p className=" w-fit">View repository</p>
       </a>
     </motion.div>
   );
