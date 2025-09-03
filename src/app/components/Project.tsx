@@ -48,6 +48,8 @@ export default function Project({
               src={image}
               style={{ width: "100%", height: "auto" }}
               alt={title}
+              loading="lazy"
+              placeholder="blur"
             />
           </div>
         </motion.div>
